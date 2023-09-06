@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Site Web</title>
+</head>
+<body>
+    <h1>Bienvenue sur mon site web</h1>
+    <p>Informations de l'ordinateur :</p>
+    <ul>
+        <li id="computer_identity"></li>
+        <li id="username"></li>
+        <li id="ip_address"></li>
+    </ul>
+    
+    <p>Données de frappe :</p>
+    <div id="key_data"></div>
+    
+    <!-- Lien vers la page "page.html" -->
+    <a href="page.html">Cliquez ici pour accéder à la page</a>
+
+    <script>
+        function afficherInformationsOrdinateur() {
+            // Récupérer les informations de l'ordinateur depuis Python
+            var computerIdentity = "Ordinateur : MonPC, Système : Windows"; // Exemple
+            var username = "Nom d'utilisateur : John"; // Exemple
+            var ipAddress = "Adresse IP : 192.168.1.100"; // Exemple
+
+            // Afficher les informations
+            document.getElementById("computer_identity").textContent = computerIdentity;
+            document.getElementById("username").textContent = username;
+            document.getElementById("ip_address").textContent = ipAddress;
+        }
+
+        function afficherDonneesFrappe() {
+            // Récupérer les données de frappe depuis Python
+            var keyData = "Texte en cours de saisie : Hello World"; // Exemple
+
+            // Afficher les données de frappe
+            document.getElementById("key_data").textContent = keyData;
+        }
+
+        // Appelez les fonctions lorsque la page est chargée
+        window.onload = function() {
+            afficherInformationsOrdinateur();
+            afficherDonneesFrappe();
+        };
+    </script>
+</body>
+</html>
